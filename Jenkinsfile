@@ -12,7 +12,7 @@ pipeline {
 	
 		stage('build') {
 			steps {
-				echo "JAVA_HOME = C:\\Program Files\\Java\\jre-9.0.4 "
+				
 				bat 'mvn clean package'
 			}
 		}
