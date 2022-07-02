@@ -13,7 +13,7 @@ pipeline {
 		stage('build') {
 			steps {
 				
-				bat "echo %JAVA_HOME% "
+				bat "ENV %JAVA_HOME%\\bin "
 				bat " mvn clearn package"
 			}
 		}
