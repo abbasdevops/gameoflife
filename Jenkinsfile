@@ -15,7 +15,7 @@ pipeline {
 			steps {
 				
 
-				bat "cmd.exe /C '''D:\\DevOps course tech\\apache-maven-3.8.6\\bin\\mvn.cmd''' clean package"
+				bat " 'D:\\DevOps course tech\\apache-maven-3.8.6\\bin\\mvn.cmd' clean package"
 			}
 		}
     }
