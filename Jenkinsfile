@@ -14,7 +14,7 @@ pipeline {
 		stage('build') {
 			steps {
 
-				bat "mvn clearn package"
+				bat "D:\\DevOps course tech\\apache-maven-3.8.6\\bin\\mvn.cmd clearn package"
 			}
 		}
     }
