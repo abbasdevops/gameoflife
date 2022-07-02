@@ -13,7 +13,7 @@ pipeline {
 		stage('build') {
 			steps {
 				
-				echo "%JAVA_HOME%"
+				bat "echo %JAVA_HOME% "
 			}
 		}
     }
