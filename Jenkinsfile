@@ -14,6 +14,7 @@ pipeline {
 			steps {
 				
 				bat "echo %JAVA_HOME% "
+				bat " mvn clearn package"
 			}
 		}
     }
