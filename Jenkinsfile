@@ -1,11 +1,6 @@
 
 pipeline {
-	
-
-withMaven(globalMavenSettingsConfig: 'null', jdk: 'Java', maven: 'Maven', mavenSettingsConfig: 'null') {
-    // some block
-}
-	
+		
 	agent any
 	
 	stages {
