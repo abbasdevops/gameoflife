@@ -7,7 +7,7 @@ pipeline {
 	stages {
         stage('Initialize'){
             steps{
-                echo "PATH = "D:\DevOps course tech\apache-maven-3.8.6\bin" "
+                echo "PATH = 'D:\DevOps course tech\apache-maven-3.8.6\bin' "
                 
             }
         }
