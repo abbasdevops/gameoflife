@@ -13,7 +13,7 @@ pipeline {
 		stage('build') {
 			steps {
 				
-				bat "SET JAVA_HOME=C:\\Program Files\\Java\\jdk-9.0.4"
+				echo "JAVA_HOME: %JAVA_HOME%"
 				bat "mvn clearn package"
 			}
 		}
