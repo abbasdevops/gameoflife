@@ -13,7 +13,7 @@ pipeline {
 		stage('build') {
 			steps {
 				
-				bat 'mvn clean package'
+				echo "%JAVA_HOME%"
 			}
 		}
     }
