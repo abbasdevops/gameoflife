@@ -25,6 +25,11 @@ pipeline {
             steps { 
                 deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:8081/')], contextPath: 'gameoflife1', war: '**/*.war'
             }
+       } 
+        stage('TomcatDeploy') {
+            steps { 
+                nexusArtifactUploader artifacts: [[artifactId: 'gameoflife', classifier: '', file: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Declarative-Pipeline-Java\\gameoflife-web\\target\\gameoflife.war', type: 'war']], credentialsId: 'nexus-2password', groupId: 'com.wakaleo.gameoflife', nexusUrl: 'http://localhost:8083/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'Releases', version: '1.0.1'
+            }
        }  
     }
 }
