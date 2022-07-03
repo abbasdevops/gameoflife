@@ -28,7 +28,8 @@ pipeline {
        } 
        stage('Publish-To-Nexus') {
             steps { 
-                nexusArtifactUploader artifacts: [[artifactId: 'gameoflife', classifier: '', file: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Declarative-Pipeline-Java\\gameoflife-web\\target\\gameoflife.war', type: 'war']], credentialsId: 'nexus-2password', groupId: 'com.wakaleo.gameoflife', nexusUrl: 'localhost:8083/nexus/content/ ', nexusVersion: 'nexus3', protocol: 'http', repository: 'releases', version: '1.1'
+                //nexusArtifactUploader artifacts: [[artifactId: 'gameoflife', classifier: '', file: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Declarative-Pipeline-Java\\gameoflife-web\\target\\gameoflife.war', type: 'war']], credentialsId: 'nexus-2password', groupId: 'com.wakaleo.gameoflife', nexusUrl: 'localhost:8083/nexus/content/ ', nexusVersion: 'nexus3', protocol: 'http', repository: 'releases', version: '1.1'
+                nexusPublisher nexusInstanceId: 'Releases', nexusRepositoryId: 'releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Declarative-Pipeline-Java\\gameoflife-web\\target\\gameoflife.war']], mavenCoordinate: [artifactId: 'gameoflife', groupId: 'com.wakaleo.gameoflife', packaging: 'war', version: '1.2']]]
             }
          } 
     }
