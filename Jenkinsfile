@@ -5,7 +5,7 @@ pipeline {
             		steps{
                 		echo "PATH = 'D:\\DevOps course tech\\apache-maven-3.8.6\\bin' "
 				SET "JAVA_HOME: C:\\Program Files\\Java\\jre-9.0.4"
-				echo "JAVA_HOME: %JAVA_HOME %"
+				
                 	
             }
         }
