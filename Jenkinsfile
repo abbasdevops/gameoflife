@@ -31,6 +31,5 @@ pipeline {
                 nexusArtifactUploader artifacts: [[artifactId: 'gameoflife', classifier: '', file: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Declarative-Pipeline-Java\\gameoflife-web\\target\\gameoflife.war', type: 'war']], credentialsId: 'nexus-2password', groupId: 'com.wakaleo.gameoflife', nexusUrl: 'http://localhost:8083/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'Releases', version: '1.0.1'
             }
          } 
-       }
     }
 }
